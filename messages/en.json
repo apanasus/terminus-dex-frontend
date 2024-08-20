@@ -1,0 +1,438 @@
+{
+  "LocaleLayout": {
+    "title": "Terminus",
+    "description": "Terminus"
+  },
+  "HeaderComponent": {
+    "menu": {
+      "exchange": "EXCHANGE",
+      "liquidity": "LIQUIDITY",
+      "staking": "STAKING",
+      "farms": "FARMS",
+      "token": "TOKEN",
+      "referral": "REFERRAL",
+      "developer": "DEVELOPER",
+      "blog": "BLOG",
+      "faq": "FAQ",
+      "privacy-policy": "PRIVACY POLICY",
+      "terms-of-use": "TERMS OF USE"
+    }
+  },
+  "LanguageComponent": {
+    "en": "English",
+    "ru": "Russian",
+    "ua": "Ukrainian"
+  },
+  "FooterComponent": {
+    "menu": {
+      "developer": "DEVELOPER",
+      "blog": "BLOG",
+      "faq": "FAQ",
+      "privacy-policy": "PRIVACY POLICY",
+      "terms-of-use": "TERMS OF USE"
+    }
+  },
+  "ComingSoonComponent": {
+    "title": "COMING SOON",
+    "description": "We are working on it"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist",
+    "message": {
+      "header": "Page not found",
+      "description": "We're sorry, the page you requested was not found",
+      "buttonLabel": "BACK TO HOME",
+      "button-text": "TO MAIN"
+    }
+  },
+  "HomePage": {
+    "title": "Home",
+    "description": "Terminus - Decentralized Exchange",
+    "hero": {
+      "header": "Swap like a pro",
+      "label": "Anytime, Anywhere",
+      "description": "Our integrate service system guarantees the ease of investing in crypto assets",
+      "buttonLabel": "GET STARTED"
+    },
+    "cardsBlock": {
+      "1": {
+        "header": "Build to Last",
+        "text": "Built in alliance with TON Core Developers"
+      },
+      "2": {
+        "header": "Open Source",
+        "text": "The future must be accessible to all, so our protocol is open source."
+      },
+      "3": {
+        "header": "Secure",
+        "text": "We have been audited by Certik, a top-ranked blockchain security company."
+      },
+      "4": {
+        "header": "Non-Custodial",
+        "text": "The stakes remain completely under your control, without intermediaries."
+      }
+    },
+    "handBlock": {
+      "header": "With you every step of the way",
+      "text": "From your first crypto trade to your first NFT purchase, you''ll have us to guide you through the process. No stupid questions. No sleepless nights.",
+      "buttonLabel": "SWAP NOW",
+      "connectWallet": "CONNECT WALLET"
+    },
+    "faq": {
+      "header": "Got questions?",
+      "questions": {
+        "1": {
+          "question": "What products does HAX provide?",
+          "answer": "Founded in 2017, HAX is a Seychelles-registered cryptocurrency exchange that adopts blockchain technology to build the next-generation financial ecosystem. We provide the latest trading services for hundreds of diverse crypto assets."
+        },
+        "2": {
+          "question": "How do I buy Bitcoin on HAX?",
+          "answer": ""
+        },
+        "3": {
+          "question": "Where is HAX Bases?",
+          "answer": ""
+        },
+        "4": {
+          "question": "Can U.S. citizens use HAX?",
+          "answer": ""
+        },
+        "5": {
+          "question": "What is crypto",
+          "answer": ""
+        },
+        "6": {
+          "question": "How to trade crypto on HAX",
+          "answer": ""
+        }
+      }
+    },
+    "slider": {
+      "slides": {
+        "1": {
+          "title": "Seamless Cross-Chain Swaps",
+          "description": "Easily and securely move and convert assets across all major blockchains with our platform. Our solution allows for smooth and reliable transfer of digital assets, providing flexible access to a variety of blockchains.",
+          "buttonLabel": "SWAP NOW"
+        },
+        "2": {
+          "title": "Seamless Cross-Chain Swaps",
+          "description": "Easily and securely move and convert assets across all major blockchains with our platform. Our solution allows for smooth and reliable transfer of digital assets, providing flexible access to a variety of blockchains.",
+          "buttonLabel": "SWAP NOW"
+        }
+      }
+    }
+  },
+  "StakingPage": {
+    "title": "Staking",
+    "description": "Staking",
+    "hero": {
+      "header": "The future of staking",
+      "label": "Anytime, Anywhere",
+      "description": "By staking assets, you not only grow your portfolio, but also help secure blockchain networks.",
+      "buttonLabel": "STAKE NOW"
+    },
+    "statsBlock": {
+      "cards": {
+        "1": {
+          "label": "ALREADY STAKERS"
+        },
+        "2": {
+          "label": "ANNUAL PERCENTAGE YIELD"
+        },
+        "3": {
+          "label": "TOTAL VALUE LOCKED"
+        }
+      }
+    },
+    "imageBlock": {
+      "header": "Unlock the power of Liquid Staking",
+      "text": "Get yields securely, equally and transparently at best rates on the market. Keep access to your staked asset at all times. Deposit TON, we'll do the rest.",
+      "buttonLabel": "STAKE NOW"
+    },
+    "rocketBlock": {
+      "cards": {
+        "1": {
+          "header": "Build to Last",
+          "text": "Built in alliance with TON Core Developers"
+        },
+        "2": {
+          "header": "Open Source",
+          "text": "The future must be accessible to all, so our protocol is open source."
+        },
+        "3": {
+          "header": "Secure",
+          "text": "We have been audited by Certik, a top-ranked blockchain security company."
+        },
+        "4": {
+          "header": "Non-Custodial",
+          "text": "The stakes remain completely under your control, without intermediaries."
+        }
+      },
+      "header": "Name is Secure to the Core"
+    },
+    "messageBlock": {
+      "message": "We want everyone to get rewards for participating in blockchain security"
+    },
+    "stepsBlock": {
+      "header": "How to Get Yields from TON Using Name",
+      "steps": {
+        "1": {
+          "title": "Deposit TON",
+          "text": "Deposit the desired amount of TON coins you want to stake on the platform."
+        },
+        "2": {
+          "title": "Receive tsTON",
+          "text": "Receive tsTON tokens, which represent share in the TON pool."
+        },
+        "3": {
+          "title": "Earn Rewards",
+          "text": "With your staking asset while using liquid token for other purposes."
+        },
+        "4": {
+          "title": "Withdraw",
+          "text": "Just exchange anytime your tsTON tokens back for TON coins with the accumulated yield."
+        }
+      }
+    },
+    "faq": {
+      "header": "Got questions?",
+      "questions": {
+        "1": {
+          "question": "What products does HAX provide?",
+          "answer": "Founded in 2017, HAX is a Seychelles-registered cryptocurrency exchange that adopts blockchain technology to build the next-generation financial ecosystem. We provide the latest trading services for hundreds of diverse crypto assets."
+        },
+        "2": {
+          "question": "How do I buy Bitcoin on HAX?",
+          "answer": ""
+        },
+        "3": {
+          "question": "Where is HAX Bases?",
+          "answer": ""
+        },
+        "4": {
+          "question": "Can U.S. citizens use HAX?",
+          "answer": ""
+        },
+        "5": {
+          "question": "What is crypto",
+          "answer": ""
+        },
+        "6": {
+          "question": "How to trade crypto on HAX",
+          "answer": ""
+        }
+      }
+    }
+  },
+  "StakePage": {
+    "title": "Stake",
+    "description": "Stake",
+    "faq": {
+      "header": "FAQ",
+      "questions": {
+        "1": {
+          "question": "What products does HAX provide?",
+          "answer": "Founded in 2017, HAX is a Seychelles-registered cryptocurrency exchange that adopts blockchain technology to build the next-generation financial ecosystem. We provide the latest trading services for hundreds of diverse crypto assets."
+        },
+        "2": {
+          "question": "How do I buy Bitcoin on HAX?",
+          "answer": ""
+        },
+        "3": {
+          "question": "Where is HAX Bases?",
+          "answer": ""
+        },
+        "4": {
+          "question": "Can U.S. citizens use HAX?",
+          "answer": ""
+        },
+        "5": {
+          "question": "What is crypto",
+          "answer": ""
+        },
+        "6": {
+          "question": "How to trade crypto on HAX",
+          "answer": ""
+        }
+      }
+    }
+  },
+  "ReferralPage": {
+    "faq": {
+      "header": "Got questions?",
+      "questions": {
+        "1": {
+          "question": "What products does HAX provide?",
+          "answer": "Founded in 2017, HAX is a Seychelles-registered cryptocurrency exchange that adopts blockchain technology to build the next-generation financial ecosystem. We provide the latest trading services for hundreds of diverse crypto assets."
+        },
+        "2": {
+          "question": "How do I buy Bitcoin on HAX?",
+          "answer": ""
+        },
+        "3": {
+          "question": "Where is HAX Bases?",
+          "answer": ""
+        },
+        "4": {
+          "question": "Can U.S. citizens use HAX?",
+          "answer": ""
+        },
+        "5": {
+          "question": "What is crypto",
+          "answer": ""
+        },
+        "6": {
+          "question": "How to trade crypto on HAX",
+          "answer": ""
+        }
+      }
+    },
+    "title": "Referrals",
+    "description": "Referrals",
+    "cardsBlock": {
+      "cards": {
+        "1": {
+          "header": "Create Code",
+          "description": "Built in alliance with TON Core Developers."
+        },
+        "2": {
+          "header": "Send link on social",
+          "description": "Send your link through to all of your social networks."
+        },
+        "3": {
+          "header": "Start earning fee",
+          "description": "Earn a fee rebates from all trades your referrals do on our platform."
+        }
+      }
+    },
+    "hero": {
+      "header": "Welcome to our",
+      "label": "Referral Program",
+      "description": "Create your own referral link and refer friends to ern a trading volume rebate",
+      "buttonLabel": "Get Started"
+    }
+  },
+  "faq": {
+    "defaultHeader": "Got questions?"
+  },
+  "TermsOfUsePage": {
+    "complianceMessage": "By using the app, you confirm compliance with our Terms of Service."
+  },
+  "PrivacyPolicyPage": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy"
+  },
+  "LiquidityPage": {
+    "title": "Liquidity",
+    "description": "Liquidity"
+  },
+  "FarmsPage": {
+    "title": "Farms",
+    "description": "Farms"
+  },
+  "FaqPage": {
+    "title": "FAQ",
+    "description": "FAQ"
+  },
+  "ExchangePage": {
+    "description": "Exchange",
+    "title": "Exchange"
+  },
+  "SwapFormComponent": {
+    "header": "DeFi Swap",
+    "description": "Swap crypto tokens in a single transaction",
+    "swapButton": {
+      "swap": "SWAP"
+    },
+    "sendInputHeader": "You Send",
+    "receiveInputHeader": "You Receive",
+    "details": {
+      "price": "Price",
+      "slippage": "Slippage Tolerance",
+      "minimumReceived": "Minimum Received",
+      "priceImpact": "Price Impact",
+      "fee": "Fee",
+      "rate": "Rate"
+    },
+    "chooseAssets": "Choose assets",
+    "enterAmont": "Enter an amount",
+    "lowAmount": "Low amount",
+    "connectWallet": "Connect Wallet",
+    "notEnoughTon": "Not enough TON",
+    "notEnoughAsset": "Not enough {0}",
+    "ConfirmModal": {
+      "title": "You get"
+    },
+    "swap": "Swap"
+  },
+  "Common": {
+    "balance": "Balance",
+    "slippageTolerance": "Slippage Tolerance",
+    "estYearlyReward": "Est. yearly reward"
+  },
+  "DeveloperPage": {
+    "title": "Developer",
+    "description": "Developer"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "description": "Blog"
+  },
+  "AccountPage": {
+    "title": "Account",
+    "description": "Account"
+  },
+  "LiquidityFormComponent": {
+    "createPoolMessage": "You create a pool with {0} and {1} at your own risk. Anyone can create an asset, including fake versions of existing assets",
+    "header": "Liquidity",
+    "description": "Add liquidity to earn from commissions",
+    "sendInputHeader": "First Asset",
+    "receiveInputHeader": "Second Asset",
+    "chooseAssets": "Choose Assets",
+    "enterAmont": "Enter an amount",
+    "lowAmount": "Low amount",
+    "connectWallet": "Connect Wallet",
+    "notEnoughTon": "Not enough TON",
+    "notEnoughJetton": "Not enough {0}",
+    "createPool": "Create Pool",
+    "activateLiquidity": "Activate provided Liquidity",
+    "provide": "Provide",
+    "provideAdditional": "Provide additional",
+    "refund": "Refund",
+    "confirmProvideModal": {
+      "title": "Add Liquidity"
+    },
+    "confirmRefundLiquidityModal": {
+      "title": "Refund",
+      "button": "Confirm"
+    },
+    "details": {
+      "rate": "Rate",
+      "minFirstAmount": "Minimum first amount",
+      "minSecondAmount": "Minimum second amount",
+      "minReceived": "Minimum received",
+      "estShare": "Est. share",
+      "firstTokenBalance": "Lp Account balance",
+      "secondTokenBalance": "Lp Account balance",
+      "blockchainFee": "Fee",
+      "youProvide": "You provide"
+    },
+    "refundLiquidityDetails": {
+      "firstAssetBalance": "Lp Account balance",
+      "secondAssetBalance": "Lp Account balance"
+    }
+  },
+  "ChooseAssetModal": {
+    "searchPlaceholder": "Search name or paste address",
+    "title": "Select a token"
+  },
+  "ProcessingModal": {
+    "processing": "Processing",
+    "description": "Confirm the action in the {0} app on your mobile device"
+  },
+  "ProvideLiquidityPage": {
+    "title": "Provide Liquidity",
+    "description": "Provide Liquidity"
+  }
+}

@@ -1,0 +1,35 @@
+.footer {
+  position: relative;
+  justify-self: end;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  min-height: 80px;
+}
+
+.logo {
+  height: 35px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: start;
+}
+
+.footer_menu {
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  font-size: 14px;
+  font-weigth: 400;
+  padding: 12px 24px;
+}
+
+.socials {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

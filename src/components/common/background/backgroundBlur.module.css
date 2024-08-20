@@ -1,0 +1,52 @@
+.background_blur {
+  position: absolute;
+  width: fit-content;
+  max-width: 636px;
+  height: 500px;
+  left: calc(50% - 636px / 2);
+  bottom: 0px;
+
+  opacity: 0.16;
+  filter: blur(124px);
+  border-radius: 16px;
+}
+
+.rectangle1 {
+  position: absolute;
+  width: 294.39px;
+  height: 300px;
+  left: 210px;
+  top: 214px;
+
+  background: linear-gradient(180deg, #5452f6 0%, #313090 100%);
+}
+
+.rectangle2 {
+  position: absolute;
+  width: 294.39px;
+  height: 300px;
+  left: 0px;
+  top: 214px;
+
+  background: linear-gradient(180deg, #ff5943 0%, #993528 100%);
+}
+
+.rectangle3 {
+  position: absolute;
+  width: 294.39px;
+  height: 300px;
+  left: 210px;
+  top: 0px;
+
+  background: linear-gradient(180deg, #65bf73 0%, #2f5936 100%);
+}
+
+.rectangle4 {
+  position: absolute;
+  width: 294.39px;
+  height: 300px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(180deg, #1e86d9 0%, #104773 100%);
+}

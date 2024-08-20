@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: start;
+  height: 35px;
+  min-width: 35px;
+}
+
+.main_menu {
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  font-size: 14px;
+  font-weigth: 400;
+  padding: 12px 12px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.02);
+
+  backdrop-filter: blur(24px);
+}
+
+.profile_button {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 48px;
+  font-size: 14px;
+  gap: 20px;
+}
+
+.profile_button svg {
+  opacity: 0.9;
+}

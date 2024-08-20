@@ -1,0 +1,109 @@
+/* soft */
+.advantage_card--soft {
+  background-color: rgb(var(--soft-100));
+}
+.advantage_card--soft__triangle {
+  background-color: rgb(var(--soft-200));
+}
+.advantage_card--soft__icon {
+  color: rgb(var(--soft-100));
+}
+
+.advantage_card--soft:hover {
+  background-color: rgb(var(--soft-200));
+}
+.advantage_card--soft:hover .advantage_card--soft__triangle {
+  background-color: rgb(var(--accent-800));
+}
+.advantage_card--soft:hover .advantage_card--soft__icon {
+  color: rgb(var(--accent-800));
+}
+/* end soft */
+
+/* brown */
+.advantage_card--brown {
+  background-color: rgba(255 163 124 / 0.08);
+}
+.advantage_card--brown__triangle {
+  background-color: rgba(255 163 124 / 0.24);
+}
+.advantage_card--brown__icon {
+  color: rgba(255 163 124 / 0.24);
+}
+
+.advantage_card--brown:hover {
+  background-color: rgba(255 163 124 / 0.16);
+}
+.advantage_card--brown:hover .advantage_card--brown__triangle {
+  background-color: rgb(255 163 124 / 0.48);
+}
+.advantage_card--brown:hover .advantage_card--brown__icon {
+  color: rgb(255 163 124 / 0.48);
+}
+/* end brown */
+
+/* green */
+.advantage_card--green {
+  background-color: rgba(252 255 125 / 0.08);
+}
+.advantage_card--green__triangle {
+  background-color: rgba(252 255 125 / 0.24);
+}
+.advantage_card--green__icon {
+  color: rgba(252 255 125 / 0.24);
+}
+
+.advantage_card--green:hover {
+  background-color: rgba(252 255 125 / 0.16);
+}
+.advantage_card--green:hover .advantage_card--green__triangle {
+  background-color: rgb(252 255 125 / 0.48);
+}
+.advantage_card--green:hover .advantage_card--green__icon {
+  color: rgb(252 255 125 / 0.48);
+}
+/* end green */
+
+/* violet */
+.advantage_card--violet {
+  background-color: rgba(219 118 255 / 0.08);
+}
+.advantage_card--violet__triangle {
+  background-color: rgba(219 118 255 / 0.24);
+}
+.advantage_card--violet__icon {
+  color: rgba(219 118 255 / 0.24);
+}
+
+.advantage_card--violet:hover {
+  background-color: rgba(219 118 255 / 0.16);
+}
+.advantage_card--violet:hover .advantage_card--violet__triangle {
+  background-color: rgb(219 118 255 / 0.48);
+}
+.advantage_card--violet:hover .advantage_card--violet__icon {
+  color: rgb(219 118 255 / 0.48);
+}
+/* end violet */
+
+/* meta */
+.advantage_card--meta {
+  background-color: rgba(118 197 255 / 0.08);
+}
+.advantage_card--meta__triangle {
+  background-color: rgba(118 197 255 / 0.24);
+}
+.advantage_card--meta__icon {
+  color: rgba(118 197 255 / 0.24);
+}
+
+.advantage_card--meta:hover {
+  background-color: rgba(118 197 255 / 0.16);
+}
+.advantage_card--meta:hover .advantage_card--meta__triangle {
+  background-color: rgb(118 197 255 / 0.48);
+}
+.advantage_card--meta:hover .advantage_card--meta__icon {
+  color: rgb(118 197 255 / 0.48);
+}
+/* end meta */
