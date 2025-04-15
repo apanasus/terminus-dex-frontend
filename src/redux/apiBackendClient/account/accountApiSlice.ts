@@ -11,6 +11,12 @@ const BASE_URL = `${BACKEND_URL}/api/v1/account/`;
 
 // === === === === === === ===
 
+/**
+ * @swagger
+ * tags:
+ *   name: Account
+ *   description: API для работы с аккаунтами
+ */
 export const accountApiV1 = createApi({
   reducerPath: "accountApiV1",
   baseQuery: fetchBaseQuery({
@@ -18,12 +24,53 @@ export const accountApiV1 = createApi({
     credentials: "include",
   }),
   endpoints: (builder) => ({
-    // === === === === === === ===
+    /**
+     * @swagger
+     * /api/v1/account/get_payload:
+     *   get:
+     *     summary: Получить payload для авторизации
+     *     tags: [Account]
+     *     responses:
+     *       200:
+     *         description: Успешный ответ
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/AuthPayloadResponse'
+     *       400:
+     *         description: Ошибка запроса
+     */
     getPayload: builder.query<AuthPayloadResponse | ErrorResponseMessage, void>({
       query: () => "get_payload",
     }),
-    // === === === === === === ===
-    login: builder.query<SuccessResponseMessage | ErrorResponseMessage, AuthLoginRequest>({
+
+    /**
+     * @swagger
+     * /api/v1/account/auth:
+     *   post:
+     *     summary: Авторизация пользователя
+     *     tags: [Account]
+     *     requestBody:
+     *       required: true
+     *       content:
+     *         application/json:
+     *           schema:
+     *             $ref: '#/components/schemas/AuthLoginRequest'
+     *     responses:
+     *       200:
+     *         description: Успешная авторизация
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/AuthPayloadResponse'
+     *       400:
+     *         description: Ошибка авторизации
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ErrorResponseMessage'
+     */
+    login: builder.query<AuthPayloadResponse | ErrorResponseMessage, AuthLoginRequest>({
       query: (data) => {
         return {
           url: "auth",
@@ -32,7 +79,30 @@ export const accountApiV1 = createApi({
         };
       },
     }),
-    // === === === === === === ===
+
+    /**
+     * @swagger
+     * /api/v1/account/{address}/balances:
+     *   get:
+     *     summary: Получить балансы пользователя
+     *     tags: [Account]
+     *     parameters:
+     *       - in: path
+     *         name: address
+     *         required: true
+     *         schema:
+     *           type: string
+     *         description: Адрес пользователя
+     *     responses:
+     *       200:
+     *         description: Успешный ответ с балансами
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Balances'
+     *       400:
+     *         description: Ошибка запроса
+     */
     getBalances: builder.query<Balances, string>({
       query: (address) => {
         return {
@@ -42,7 +112,6 @@ export const accountApiV1 = createApi({
       },
       transformResponse: balancesInToBalances,
     }),
-    // === === === === === === ===
   }),
 });
 

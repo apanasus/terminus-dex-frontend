@@ -8,6 +8,52 @@ import {
   TransactionDataIn,
 } from "./commonTypes";
 
+/**
+ * @swagger
+ * /api/v1/assets:
+ *   get:
+ *     summary: Получить список активов
+ *     tags: [Assets]
+ *     responses:
+ *       200:
+ *         description: Список активов
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/TonAsset'
+ *       400:
+ *         description: Ошибка запроса
+ */
+
+/**
+ * @swagger
+ * /api/v1/transactions/prepare:
+ *   post:
+ *     summary: Подготовить транзакцию
+ *     tags: [Transactions]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/TransactionDataIn'
+ *     responses:
+ *       200:
+ *         description: Успешная подготовка транзакции
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/TransactionData'
+ *       400:
+ *         description: Ошибка запроса
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponseMessage'
+ */
+
 // === === === === === === ===
 
 export const assetInToAsset = (asset: TonAssetIn): TonAsset => {

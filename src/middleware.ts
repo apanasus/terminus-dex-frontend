@@ -3,10 +3,9 @@ import { locales } from "./config";
 
 export default createMiddleware({
   locales,
-  defaultLocale: "en",
+  defaultLocale: "ru",
 });
 
 export const config = {
-  // matcher: ["/", "/(ru|ua|en)/:path*"],
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  matcher: ["/((?!swagger|api|_next|_vercel|.*\\..*).*)"],
 };

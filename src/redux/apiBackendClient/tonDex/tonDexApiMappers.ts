@@ -32,6 +32,33 @@ import { ErrorResponseMessage } from "../common/commonTypes";
 
 // === === === === === === ===
 
+/**
+ * @swagger
+ * /api/v1/ton-dex/swap-params:
+ *   post:
+ *     summary: Получить параметры свапа
+ *     tags: [DEX]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/GetSwapParamsRequestBody'
+ *     responses:
+ *       200:
+ *         description: Параметры свапа
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SwapParams'
+ *       400:
+ *         description: Ошибка запроса
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponseMessage'
+ */
+
 export const getSwapParamsResultInToInner = (
   response: GetSwapParamsSuccessMessageIN | ErrorResponseMessage,
 ): SwapParams | ErrorResponseMessage => {

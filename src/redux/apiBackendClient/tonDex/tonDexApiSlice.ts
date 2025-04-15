@@ -49,7 +49,28 @@ export const tonDexApiV1 = createApi({
     credentials: "include",
   }),
   endpoints: (builder) => ({
-    // === === === === === === ===
+    /**
+     * @swagger
+     * /api/v1/ton-dex/assets:
+     *   get:
+     *     summary: Получить список всех активов
+     *     tags: [DEX]
+     *     responses:
+     *       200:
+     *         description: Список активов
+     *         content:
+     *           application/json:
+     *             schema:
+     *               type: array
+     *               items:
+     *                 $ref: '#/components/schemas/TonAsset'
+     *       400:
+     *         description: Ошибка запроса
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ErrorResponseMessage'
+     */
     getAllAssets: builder.query<TonAsset[], void>({
       query: () => {
         return {
@@ -61,7 +82,34 @@ export const tonDexApiV1 = createApi({
         return data.map(assetInToAsset);
       },
     }),
-    // === === === === === === ===
+
+    /**
+     * @swagger
+     * /api/v1/ton-dex/asset/{address}/find:
+     *   get:
+     *     summary: Найти актив по адресу
+     *     tags: [DEX]
+     *     parameters:
+     *       - in: path
+     *         name: address
+     *         required: true
+     *         schema:
+     *           type: string
+     *         description: Адрес актива
+     *     responses:
+     *       200:
+     *         description: Найденный актив
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/TonAsset'
+     *       400:
+     *         description: Ошибка запроса
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ErrorResponseMessage'
+     */
     findAsset: builder.mutation<TonAsset, Address>({
       query: (address) => {
         return {
@@ -71,7 +119,33 @@ export const tonDexApiV1 = createApi({
       },
       transformResponse: assetInToAsset,
     }),
-    // === === === === === === ===
+
+    /**
+     * @swagger
+     * /api/v1/ton-dex/swap/params:
+     *   post:
+     *     summary: Получить параметры свапа
+     *     tags: [DEX]
+     *     requestBody:
+     *       required: true
+     *       content:
+     *         application/json:
+     *           schema:
+     *             $ref: '#/components/schemas/GetSwapParamsRequestBody'
+     *     responses:
+     *       200:
+     *         description: Параметры свапа
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/SwapParams'
+     *       400:
+     *         description: Ошибка запроса
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ErrorResponseMessage'
+     */
     getSwapParams: builder.query<SwapParams | ErrorResponseMessage, GetSwapParamsRequestBody>({
       query: (body) => {
         return {
@@ -82,18 +156,33 @@ export const tonDexApiV1 = createApi({
       },
       transformResponse: getSwapParamsResultInToInner,
     }),
-    // === === === === === === ===
-    getPreparedSwapTransaction: builder.mutation<TransactionData | ErrorResponseMessage, SwapTransactionParams>({
-      query: (body) => {
-        return {
-          url: "swap/prepare",
-          method: "POST",
-          body: swapTransactionParamsToOut(body),
-        };
-      },
-      transformResponse: transformPreparedTransactionMessage,
-    }),
-    // === === === === === === ===
+
+    /**
+     * @swagger
+     * /api/v1/ton-dex/liquidity/params:
+     *   post:
+     *     summary: Получить параметры ликвидности
+     *     tags: [DEX]
+     *     requestBody:
+     *       required: true
+     *       content:
+     *         application/json:
+     *           schema:
+     *             $ref: '#/components/schemas/GetProvideParamsRequestBody'
+     *     responses:
+     *       200:
+     *         description: Параметры ликвидности
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ProvideParams'
+     *       400:
+     *         description: Ошибка запроса
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ErrorResponseMessage'
+     */
     getProvideParams: builder.query<ProvideParams | ErrorResponseMessage, GetProvideParamsRequestBody>({
       query: (body) => {
         return {
@@ -108,6 +197,52 @@ export const tonDexApiV1 = createApi({
         }
         return getProvideParamsResultInToInner(response.data);
       },
+    }),
+
+    /**
+     * @swagger
+     * /api/v1/ton-dex/assets/pairs:
+     *   get:
+     *     summary: Получить пары активов
+     *     tags: [DEX]
+     *     responses:
+     *       200:
+     *         description: Пары активов
+     *         content:
+     *           application/json:
+     *             schema:
+     *               type: object
+     *               additionalProperties:
+     *                 type: object
+     *                 additionalProperties:
+     *                   type: boolean
+     *       400:
+     *         description: Ошибка запроса
+     *         content:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/ErrorResponseMessage'
+     */
+    getAssetsPairs: builder.query<Map<string, Map<string, boolean>>, undefined>({
+      query: () => {
+        return {
+          url: "assets/pairs",
+          method: "GET",
+        };
+      },
+      transformResponse: assetsPairsToMap,
+    }),
+
+    // === === === === === === ===
+    getPreparedSwapTransaction: builder.mutation<TransactionData | ErrorResponseMessage, SwapTransactionParams>({
+      query: (body) => {
+        return {
+          url: "swap/prepare",
+          method: "POST",
+          body: swapTransactionParamsToOut(body),
+        };
+      },
+      transformResponse: transformPreparedTransactionMessage,
     }),
     // === === === === === === ===
     getPreparedCreatePoolTransaction: builder.mutation<
@@ -189,16 +324,6 @@ export const tonDexApiV1 = createApi({
         };
       },
       transformResponse: transformPreparedTransactionMessage,
-    }),
-    // === === === === === === ===
-    getAssetsPairs: builder.query<Map<string, Map<string, boolean>>, undefined>({
-      query: () => {
-        return {
-          url: "assets/pairs",
-          method: "GET",
-        };
-      },
-      transformResponse: assetsPairsToMap,
     }),
   }),
 });
