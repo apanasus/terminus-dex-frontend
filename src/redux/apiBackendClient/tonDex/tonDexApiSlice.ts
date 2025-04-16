@@ -87,7 +87,7 @@ export const tonDexApiV1 = createApi({
      * @swagger
      * /api/v1/ton-dex/asset/{address}/find:
      *   get:
-     *     summary: Найти актив по адресу
+     *     summary: Find an asset by address
      *     tags: [DEX]
      *     parameters:
      *       - in: path
@@ -95,16 +95,16 @@ export const tonDexApiV1 = createApi({
      *         required: true
      *         schema:
      *           type: string
-     *         description: Адрес актива
+     *         description: Asset address
      *     responses:
      *       200:
-     *         description: Найденный актив
+     *         description: Asset Found
      *         content:
      *           application/json:
      *             schema:
      *               $ref: '#/components/schemas/TonAsset'
      *       400:
-     *         description: Ошибка запроса
+     *         description: Request Error
      *         content:
      *           application/json:
      *             schema:
@@ -124,7 +124,7 @@ export const tonDexApiV1 = createApi({
      * @swagger
      * /api/v1/ton-dex/swap/params:
      *   post:
-     *     summary: Получить параметры свапа
+     *     summary: Get swap parameters
      *     tags: [DEX]
      *     requestBody:
      *       required: true
@@ -134,13 +134,13 @@ export const tonDexApiV1 = createApi({
      *             $ref: '#/components/schemas/GetSwapParamsRequestBody'
      *     responses:
      *       200:
-     *         description: Параметры свапа
+     *         description: Swap parameters
      *         content:
      *           application/json:
      *             schema:
      *               $ref: '#/components/schemas/SwapParams'
      *       400:
-     *         description: Ошибка запроса
+     *         description: Request Error
      *         content:
      *           application/json:
      *             schema:
@@ -161,7 +161,7 @@ export const tonDexApiV1 = createApi({
      * @swagger
      * /api/v1/ton-dex/liquidity/params:
      *   post:
-     *     summary: Получить параметры ликвидности
+     *     summary: Get liquidity parameters
      *     tags: [DEX]
      *     requestBody:
      *       required: true
@@ -171,13 +171,13 @@ export const tonDexApiV1 = createApi({
      *             $ref: '#/components/schemas/GetProvideParamsRequestBody'
      *     responses:
      *       200:
-     *         description: Параметры ликвидности
+     *         description: Liquidity parameters
      *         content:
      *           application/json:
      *             schema:
      *               $ref: '#/components/schemas/ProvideParams'
      *       400:
-     *         description: Ошибка запроса
+     *         description: Request Error
      *         content:
      *           application/json:
      *             schema:
@@ -203,11 +203,11 @@ export const tonDexApiV1 = createApi({
      * @swagger
      * /api/v1/ton-dex/assets/pairs:
      *   get:
-     *     summary: Получить пары активов
+     *     summary: Get asset pairs
      *     tags: [DEX]
      *     responses:
      *       200:
-     *         description: Пары активов
+     *         description: Asset pairs
      *         content:
      *           application/json:
      *             schema:
@@ -217,7 +217,7 @@ export const tonDexApiV1 = createApi({
      *                 additionalProperties:
      *                   type: boolean
      *       400:
-     *         description: Ошибка запроса
+     *         description: Request Error
      *         content:
      *           application/json:
      *             schema:

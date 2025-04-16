@@ -12,17 +12,17 @@ export interface AuthPayloadResponse extends SuccessResponseMessage {
  * @swagger
  * /api/v1/account/get_payload:
  *   get:
- *     summary: Получить payload для авторизации
+ *     summary: Get payload for authorization
  *     tags: [Account]
  *     responses:
  *       200:
- *         description: Успешный ответ
+ *         description: Successful response
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/AuthPayloadResponse'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  */
 
 export interface AuthLoginRequest {
@@ -48,7 +48,7 @@ export interface AuthLoginRequest {
  * @swagger
  * /api/v1/account/auth:
  *   post:
- *     summary: Авторизация пользователя
+ *     summary: User authorization
  *     tags: [Account]
  *     requestBody:
  *       required: true
@@ -58,13 +58,13 @@ export interface AuthLoginRequest {
  *             $ref: '#/components/schemas/AuthLoginRequest'
  *     responses:
  *       200:
- *         description: Успешная авторизация
+ *         description: Successful authorization
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/SuccessResponseMessage'
  *       400:
- *         description: Ошибка авторизации
+ *         description: Authorization error
  */
 
 export interface BalancesIn {
@@ -78,7 +78,7 @@ export interface BalancesIn {
  * @swagger
  * /api/v1/account/{address}/balances:
  *   get:
- *     summary: Получить балансы пользователя
+ *     summary: Get user balances
  *     tags: [Account]
  *     parameters:
  *       - in: path
@@ -86,14 +86,14 @@ export interface BalancesIn {
  *         required: true
  *         schema:
  *           type: string
- *         description: Адрес пользователя
+ *         description: User address
  *     responses:
  *       200:
- *         description: Успешный ответ с балансами
+ *         description: Successful response with balances
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Balances'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  */

@@ -4,7 +4,7 @@ const swaggerOptions = {
     info: {
       title: "Terminus DEX API",
       version: "1.0.0",
-      description: "Документация API для Terminus DEX",
+      description: "API Documentation for Terminus DEX",
     },
     components: {
       schemas: {

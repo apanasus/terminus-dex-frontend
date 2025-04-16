@@ -9,11 +9,11 @@ import BN from "bignumber.js";
  * @swagger
  * /api/v1/staking/pools:
  *   get:
- *     summary: Получить список пулов для стейкинга
+ *     summary: Get a list of staking pools
  *     tags: [Staking]
  *     responses:
  *       200:
- *         description: Список пулов
+ *         description: List of pools
  *         content:
  *           application/json:
  *             schema:
@@ -21,7 +21,7 @@ import BN from "bignumber.js";
  *               items:
  *                 $ref: '#/components/schemas/StakePool'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  *         content:
  *           application/json:
  *             schema:
@@ -32,7 +32,7 @@ import BN from "bignumber.js";
  * @swagger
  * /api/v1/staking/pool/{address}/data:
  *   get:
- *     summary: Получить данные конкретного пула
+ *     summary: Get data for a specific pool
  *     tags: [Staking]
  *     parameters:
  *       - in: path
@@ -40,16 +40,16 @@ import BN from "bignumber.js";
  *         required: true
  *         schema:
  *           type: string
- *         description: Адрес пула
+ *         description: Pool address
  *     responses:
  *       200:
- *         description: Данные пула
+ *         description: Pool data
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/StakePoolData'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  *         content:
  *           application/json:
  *             schema:

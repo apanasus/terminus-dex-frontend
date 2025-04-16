@@ -12,11 +12,11 @@ import {
  * @swagger
  * /api/v1/assets:
  *   get:
- *     summary: Получить список активов
+ *     summary: Get a list of assets
  *     tags: [Assets]
  *     responses:
  *       200:
- *         description: Список активов
+ *         description: List of assets
  *         content:
  *           application/json:
  *             schema:
@@ -24,14 +24,14 @@ import {
  *               items:
  *                 $ref: '#/components/schemas/TonAsset'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  */
 
 /**
  * @swagger
  * /api/v1/transactions/prepare:
  *   post:
- *     summary: Подготовить транзакцию
+ *     summary: Prepare transaction
  *     tags: [Transactions]
  *     requestBody:
  *       required: true
@@ -41,13 +41,13 @@ import {
  *             $ref: '#/components/schemas/TransactionDataIn'
  *     responses:
  *       200:
- *         description: Успешная подготовка транзакции
+ *         description: Successful transaction preparation
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/TransactionData'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  *         content:
  *           application/json:
  *             schema:

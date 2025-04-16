@@ -13,7 +13,7 @@ const BASE_URL = `${BACKEND_URL}/api/v1/ton-staking/`;
  * @swagger
  * tags:
  *   name: Staking
- *   description: API для работы со стейкингом
+ *   description: API for working with staking
  */
 export const tonStakingApiV1 = createApi({
   reducerPath: "tonStakingApiV1",
@@ -26,11 +26,11 @@ export const tonStakingApiV1 = createApi({
      * @swagger
      * /api/v1/ton-staking/pools:
      *   get:
-     *     summary: Получить список пулов для стейкинга
+     *     summary: Get a list of staking pools
      *     tags: [Staking]
      *     responses:
      *       200:
-     *         description: Список пулов
+     *         description: List of pools
      *         content:
      *           application/json:
      *             schema:
@@ -38,7 +38,7 @@ export const tonStakingApiV1 = createApi({
      *               items:
      *                 $ref: '#/components/schemas/StakePool'
      *       400:
-     *         description: Ошибка запроса
+     *         description: Request Error
      *         content:
      *           application/json:
      *             schema:
@@ -60,7 +60,7 @@ export const tonStakingApiV1 = createApi({
      * @swagger
      * /api/v1/ton-staking/pool/{address}/data:
      *   get:
-     *     summary: Получить данные конкретного пула
+     *     summary: Get data for a specific pool
      *     tags: [Staking]
      *     parameters:
      *       - in: path
@@ -68,16 +68,16 @@ export const tonStakingApiV1 = createApi({
      *         required: true
      *         schema:
      *           type: string
-     *         description: Адрес пула
+     *         description: Pool address
      *     responses:
      *       200:
-     *         description: Данные пула
+     *         description: Pool data
      *         content:
      *           application/json:
      *             schema:
      *               $ref: '#/components/schemas/StakePoolData'
      *       400:
-     *         description: Ошибка запроса
+     *         description: Request Error
      *         content:
      *           application/json:
      *             schema:

@@ -36,7 +36,7 @@ import { ErrorResponseMessage } from "../common/commonTypes";
  * @swagger
  * /api/v1/ton-dex/swap-params:
  *   post:
- *     summary: Получить параметры свапа
+ *     summary: Get swap parameters
  *     tags: [DEX]
  *     requestBody:
  *       required: true
@@ -46,13 +46,13 @@ import { ErrorResponseMessage } from "../common/commonTypes";
  *             $ref: '#/components/schemas/GetSwapParamsRequestBody'
  *     responses:
  *       200:
- *         description: Параметры свапа
+ *         description: Swap parameters
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/SwapParams'
  *       400:
- *         description: Ошибка запроса
+ *         description: Request Error
  *         content:
  *           application/json:
  *             schema:
